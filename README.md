@@ -66,7 +66,8 @@ https://hub.docker.com/repository/docker/acckiymops/custom-nginx/general
 2. Подключитесь к контейнеру и нажмите комбинацию Ctrl-C.
 3. Выполните ```docker ps -a``` и объясните своими словами почему контейнер остановился.
   <img width="1194" height="325" alt="image" src="https://github.com/user-attachments/assets/4394cb36-2651-4724-864c-13970af887d8" />
-Контейнер остановился, т.к. мы подключились к его основному процессу и комбинацией Ctrl+C отправили сигнал процессу для завершения
+
+  ***Контейнер остановился, т.к. мы подключились к его основному процессу и комбинацией Ctrl+C отправили сигнал процессу для завершения***
 
 4. Перезапустите контейнер
 5. Зайдите в интерактивный терминал контейнера "custom-nginx-t2" с оболочкой bash.
@@ -84,16 +85,17 @@ https://hub.docker.com/repository/docker/acckiymops/custom-nginx/general
 
 10. Проверьте вывод команд: ```ss -tlpn | grep 127.0.0.1:8080``` , ```docker port custom-nginx-t2```, ```curl http://127.0.0.1:8080```. Кратко объясните суть возникшей проблемы.
     <img width="796" height="140" alt="image" src="https://github.com/user-attachments/assets/8ac3223f-f080-47e4-9cb4-b6b270873462" />
-    Nginx в контейнере после изменения конфигурации слушает 81 порт, а из контейнера пробрасывается 80 порт на 8080 локального хоста
 
-11. * Это дополнительное, необязательное задание. Попробуйте самостоятельно исправить конфигурацию контейнера, используя доступные источники в интернете. Не изменяйте конфигурацию nginx и не удаляйте контейнер. Останавливать контейнер можно. [пример источника](https://www.baeldung.com/linux/assign-port-docker-container)
+    ***Nginx в контейнере после изменения конфигурации слушает 81 порт, а из контейнера пробрасывается 80 порт на 8080 локального хоста***
+
+12. * Это дополнительное, необязательное задание. Попробуйте самостоятельно исправить конфигурацию контейнера, используя доступные источники в интернете. Не изменяйте конфигурацию nginx и не удаляйте контейнер. Останавливать контейнер можно. [пример источника](https://www.baeldung.com/linux/assign-port-docker-container)
     <img width="921" height="151" alt="image" src="https://github.com/user-attachments/assets/eac6f6bd-4c32-4a54-a46c-08a0f914c5c6" />
     <img width="929" height="288" alt="image" src="https://github.com/user-attachments/assets/d8a87163-d18b-4f0f-8d0f-f9c88c9d80d9" />
     <img width="1043" height="24" alt="image" src="https://github.com/user-attachments/assets/6ecaf7bc-9ff0-4d6e-9b44-08511e91ed69" />
     <img width="1911" height="239" alt="image" src="https://github.com/user-attachments/assets/e7a5bf30-acfd-4ae8-a5fc-f507602c4a83" />
     <img width="1196" height="274" alt="image" src="https://github.com/user-attachments/assets/f9b169f8-08b2-45a6-bb31-1ecf4d038024" />
 
-12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
+13. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
     <img width="592" height="108" alt="image" src="https://github.com/user-attachments/assets/713b2212-9d86-4083-87ff-815e76c0357b" />
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
