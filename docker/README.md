@@ -3,8 +3,6 @@
 Сценарий выполнения задачи:
 - Установите docker и docker compose plugin на свою linux рабочую станцию или ВМ.
 ```bash
-mvmeles1@ubuntu:~$ docker-compose -v
-Docker Compose version v2.5.1
 mvmeles1@ubuntu:~$ docker -v
 Docker version 28.5.1, build e180ab8
 ```
@@ -150,6 +148,7 @@ services:
 
 
 4. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
+   ***Команды выполнялись в Ubuntu c GUI***
    <img width="702" height="462" alt="image" src="https://github.com/user-attachments/assets/8d66102a-1598-436f-9bbe-fce3fce60e29" />
 
 6. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
