@@ -24,12 +24,11 @@
 ## Задача 2 (*)
 1. Создайте в yandex cloud container registry с именем "test" с помощью "yc tool" . [Инструкция](https://cloud.yandex.ru/ru/docs/container-registry/quickstart/?from=int-console-help)
 2. Настройте аутентификацию вашего локального docker в yandex container registry.
-   <img width="812" height="276" alt="image" src="https://github.com/user-attachments/assets/6817258e-e8e4-4143-8f99-dab59100e17a" />
-
 4. Соберите и залейте в него образ с python приложением из задания №1.
 5. Просканируйте образ на уязвимости.
 6. В качестве ответа приложите отчет сканирования.
-   <img width="754" height="214" alt="image" src="https://github.com/user-attachments/assets/8d7321c4-7ad0-4157-a43f-6da69d9f7953" />
+   <img width="950" height="203" alt="image" src="https://github.com/user-attachments/assets/903baecc-c625-40f9-ac77-caab3cd94acf" />
+
 
 
 ## Задача 3
