@@ -1,46 +1,21 @@
-# Домашнее задание к занятию 5. «Практическое применение Docker»
-
-### Инструкция к выполнению
-
-1. Для выполнения заданий обязательно ознакомьтесь с [инструкцией](https://github.com/netology-code/devops-materials/blob/master/cloudwork.MD) по экономии облачных ресурсов. Это нужно, чтобы не расходовать средства, полученные в результате использования промокода.
-3. **Своё решение к задачам оформите в вашем GitHub репозитории.**
-4. В личном кабинете отправьте на проверку ссылку на .md-файл в вашем репозитории.
-5. Сопроводите ответ необходимыми скриншотами.
-
----
-## Примечание: Ознакомьтесь со схемой виртуального стенда [по ссылке](https://github.com/netology-code/shvirtd-example-python/blob/main/schema.pdf)
-
----
-
-## Задача 0
-1. Убедитесь что у вас НЕ(!) установлен ```docker-compose```, для этого получите следующую ошибку от команды ```docker-compose --version```
-```
-Command 'docker-compose' not found, but can be installed with:
-
-sudo snap install docker          # version 24.0.5, or
-sudo apt  install docker-compose  # version 1.25.0-1
-
-See 'snap info docker' for additional versions.
-```
-В случае наличия установленного в системе ```docker-compose``` - удалите его.  
-2. Убедитесь что у вас УСТАНОВЛЕН ```docker compose```(без тире) версии не менее v2.24.X, для это выполните команду ```docker compose version```  
-###  **Своё решение к задачам оформите в вашем GitHub репозитории!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-
----
-
 ## Задача 1
 1. Сделайте в своем GitHub пространстве fork [репозитория](https://github.com/netology-code/shvirtd-example-python).
+   ```
+   https://github.com/acckiymops/docker-shvirtd-example-python
+   ```
 
 2. Создайте файл ```Dockerfile.python``` на основе существующего `Dockerfile`:
    - Используйте базовый образ ```python:3.12-slim```
    - Обязательно используйте конструкцию ```COPY . .``` в Dockerfile
    - Создайте `.dockerignore` файл для исключения ненужных файлов
    - Используйте ```CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]``` для запуска
-   - Протестируйте корректность сборки
-     <img width="951" height="681" alt="image" src="https://github.com/user-attachments/assets/6a509ef7-1571-4c4b-aaa1-0f365ebdff1d" />
+     <img width="548" height="232" alt="image" src="https://github.com/user-attachments/assets/35a8a914-c9df-46cd-bb4d-47dbf4af2dba" />
 
-3. (Необязательная часть, *) Изучите инструкцию в проекте и запустите web-приложение без использования docker, с помощью venv. (Mysql БД можно запустить в docker run).
-4. (Необязательная часть, *) Изучите код приложения и добавьте управление названием таблицы через ENV переменную.
+   - Протестируйте корректность сборки
+     <img width="780" height="192" alt="image" src="https://github.com/user-attachments/assets/95e35950-1128-4901-91c4-71902fcfc946" />
+ 
+4. (Необязательная часть, *) Изучите инструкцию в проекте и запустите web-приложение без использования docker, с помощью venv. (Mysql БД можно запустить в docker run).
+5. (Необязательная часть, *) Изучите код приложения и добавьте управление названием таблицы через ENV переменную.
 ---
 ### ВНИМАНИЕ!
 !!! В процессе последующего выполнения ДЗ НЕ изменяйте содержимое файлов в fork-репозитории! Ваша задача ДОБАВИТЬ 5 файлов: ```Dockerfile.python```, ```compose.yaml```, ```.gitignore```, ```.dockerignore```,```bash-скрипт```. Если вам понадобилось внести иные изменения в проект - вы что-то делаете неверно!
@@ -49,15 +24,12 @@ See 'snap info docker' for additional versions.
 ## Задача 2 (*)
 1. Создайте в yandex cloud container registry с именем "test" с помощью "yc tool" . [Инструкция](https://cloud.yandex.ru/ru/docs/container-registry/quickstart/?from=int-console-help)
 2. Настройте аутентификацию вашего локального docker в yandex container registry.
-   <img width="805" height="294" alt="image" src="https://github.com/user-attachments/assets/6f41a2ab-258b-4e3d-86d3-06c7ec81ccaf" />
+   <img width="812" height="276" alt="image" src="https://github.com/user-attachments/assets/6817258e-e8e4-4143-8f99-dab59100e17a" />
 
 4. Соберите и залейте в него образ с python приложением из задания №1.
-   <img width="951" height="370" alt="image" src="https://github.com/user-attachments/assets/c8f13c01-71df-4d15-86d0-7d29fd9ed0e5" />
-   <img width="801" height="242" alt="image" src="https://github.com/user-attachments/assets/1b2486e0-ba09-47bf-8541-5e59109fba38" />
-
-6. Просканируйте образ на уязвимости.
-7. В качестве ответа приложите отчет сканирования.
-   <img width="523" height="203" alt="image" src="https://github.com/user-attachments/assets/0907c448-37c8-4d44-900e-8bc0e9b86b9f" />
+5. Просканируйте образ на уязвимости.
+6. В качестве ответа приложите отчет сканирования.
+   <img width="754" height="214" alt="image" src="https://github.com/user-attachments/assets/8d7321c4-7ad0-4157-a43f-6da69d9f7953" />
 
 
 ## Задача 3
@@ -105,5 +77,3 @@ See 'snap info docker' for additional versions.
 ## Задача 7 (***)
 Запустите ваше python-приложение с помощью runC, не используя docker или containerd.  
 Предоставьте скриншоты  действий .
-
-
