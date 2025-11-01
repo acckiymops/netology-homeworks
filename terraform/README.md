@@ -84,6 +84,11 @@ personal.auto.tfvars
 
 6. Зайдите на вашу ВМ , подключитесь к контейнеру и проверьте наличие секретных env-переменных с помощью команды ```env```. Запишите ваш финальный код в репозиторий.
 
+   ***Код в файле ```main.tf```***
+<img width="1097" height="332" alt="image" src="https://github.com/user-attachments/assets/bc323202-32ec-43f3-9a79-4dd3505dadc6" />
+
+   
+
 ### Задание 3*
 1. Установите [opentofu](https://opentofu.org/)(fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
 2. Попробуйте выполнить тот же код с помощью ```tofu apply```, а не terraform apply.
