@@ -50,9 +50,14 @@ personal.auto.tfvars
    <img width="1301" height="61" alt="image" src="https://github.com/user-attachments/assets/d09b870f-2216-48cf-b351-b02576ce9e8a" />
 
 10. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**.
+    
     <img width="504" height="193" alt="image" src="https://github.com/user-attachments/assets/532d7db4-e03f-49bf-9792-6c0c00019741" />
 
 12. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
+
+    ```keep_locally = true``` не позволяет удалить образ при выполнении ```terraform destroy```
+    <img width="679" height="99" alt="image" src="https://github.com/user-attachments/assets/09c89fff-c5ad-49bb-a0aa-c2d1d715f96e" />
+
 
 
 ------
