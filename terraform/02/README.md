@@ -68,6 +68,8 @@
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+<img width="544" height="314" alt="image" src="https://github.com/user-attachments/assets/70047b17-e726-49ea-b103-a8fd820afd46" />
+
 
 ### Задание 5
 
@@ -128,11 +130,21 @@
 1. Напишите, какой командой можно отобразить **второй** элемент списка test_list.
 2. Найдите длину списка test_list с помощью функции length(<имя переменной>).
 3. Напишите, какой командой можно отобразить значение ключа admin из map test_map.
-4. Напишите interpolation-выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
+
+   <img width="236" height="173" alt="image" src="https://github.com/user-attachments/assets/edd2417d-8b67-49de-afbc-15ebbde16f7a" />
+
+5. Напишите interpolation-выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
 
 **Примечание**: если не догадаетесь как вычленить слово "admin", погуглите: "terraform get keys of map"
 
 В качестве решения предоставьте необходимые команды и их вывод.
+```
+> "${ local.test_map.admin } is ${ keys(local.test_map)[0]} for ${ local.test_list[2] } server based on OS ${ local.servers.production.image} with ${ local.servers.production.cpu} ${ keys(local.servers.production)[0]}, ${ local.servers.production.ram } ${ keys(local.servers.production)[3]} and ${ length(local.servers.production.disks)} virtual ${ keys(local.servers.production)[1]}"
+"John is admin for production server based on OS ubuntu-20-04 with 10 cpu, 40 ram and 4 virtual disks"
+>
+```
+<img width="1148" height="97" alt="image" src="https://github.com/user-attachments/assets/5debfcab-1c86-4a8a-a417-d8bf261b00aa" />
+
 
 ------
 
@@ -161,6 +173,9 @@ test = [
 ]
 ```
 2. Напишите выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117" из этой переменной.
+
+   <img width="462" height="71" alt="image" src="https://github.com/user-attachments/assets/1c50217c-7052-42e6-ab52-559d5f1df845" />
+
 ------
 
 ------
